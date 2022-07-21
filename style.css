@@ -95,24 +95,20 @@ li {
 
 @keyframes red {
   from {
-    margin-left: 100%;
-    width: 300%;
+    opacity: 0.5;
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    opacity: 1;
   }
 }
 
 @keyframes blue {
   from {
-    margin-left: 0%;
-    width: 100%;
+    opacity: 0.5;
   }
 
   to {
-    margin-left: 100%;
-    width: 300%;
+    opacity: 1;
   }
 }
