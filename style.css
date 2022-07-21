@@ -29,7 +29,11 @@ li {
 
 .header {
   position: fixed;
+  z-index: 3;
+
   display: flex;
+  align-items: center;
+
   width: 100%;
   height: var(--header-height);
 
@@ -72,6 +76,7 @@ li {
 }
 
 .main-content__block {
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -86,29 +91,35 @@ li {
 
 .red {
   background-color: red;
+  transition: 1.5s;
   animation: red 1.5s;
 }
 .blue {
   background-color: blue;
+  transition: 1.5s;
   animation: blue 1.5s;
 }
 
 @keyframes red {
   from {
+    left: 500px;
     opacity: 0.5;
   }
 
   to {
+    left: 0px;
     opacity: 1;
   }
 }
 
 @keyframes blue {
   from {
+    left: 500px;
     opacity: 0.5;
   }
 
   to {
+    left: 0px;
     opacity: 1;
   }
 }

@@ -1,8 +1,17 @@
-const blockClassName = ".main-content__block";
+// const checkIntersectionObserver = () => {
+//   if (typeof window == undefined && !window.IntersectionObserver) {
+//     return false;
+//   }
+//   return true;
+// };
+
+// checkIntersectionObserver();
+
+const blockClassName = "main-content__block";
 
 const observerOptions = {
   root: null,
-  rootMargin: "20px 0px 20px 0px",
+  rootMargin: "0px 0px 0px 0px",
 };
 
 const checkInView = (entries) => {
@@ -16,5 +25,5 @@ const checkInView = (entries) => {
 };
 const observer = new IntersectionObserver(checkInView, observerOptions);
 
-const blocks = document.querySelectorAll(blockClassName);
+const blocks = document.querySelectorAll("." + blockClassName);
 blocks.forEach((block) => observer.observe(block));
